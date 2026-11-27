@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report issue | FixItHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+<header id="navbar"></header>
+<main class="container">
+<div class="page-head"><div><h1 id="formTitle">Report an issue</h1>
+<p class="muted">Be specific: where is it and what exactly is wrong?</p></div></div>
+<form class="card" id="issueForm" novalidate>
+<div class="form-alert hidden" role="alert"></div>
+<div class="form-grid">
+<div class="field full"><label for="title">Title</label><input class="input" id="title" name="title" maxlength="100" required>
+<div class="field-error" data-error-for="title"></div></div>
+<div class="field full"><label for="description">Description</label><textarea class="input" id="description" name="description" maxlength="1000" required></textarea>
+<div class="field-error" data-error-for="description"></div></div>
+<div class="field"><label for="category">Category</label><select class="input" id="category" name="category" required></select>
+<div class="field-error" data-error-for="category"></div></div>
+<div class="field"><label for="building">Building</label><select class="input" id="building" name="building" required></select>
+<div class="field-error" data-error-for="building"></div></div>
+<div class="field"><label for="department">Department affected</label><select class="input" id="department" name="department" required></select>
+<div class="field-error" data-error-for="department"></div></div>
+<div class="field"><label for="location">Room / floor (optional)</label><input class="input" id="location" name="location" maxlength="100">
+<div class="field-error" data-error-for="location"></div></div>
+<div class="field full"><label for="photo">Photo (optional)</label><input class="input" id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp">
+<div class="hint">JPG, PNG or WEBP, up to 3 MB.</div><div class="field-error" data-error-for="photo"></div>
+<img class="photo-preview hidden" id="preview" alt="Selected photo preview"></div>
+</div>
+<div class="row"><button class="btn btn-accent" type="submit" id="saveBtn">Submit issue</button><a class="btn btn-ghost" href="/pages/issues.html">Cancel</a></div>
+</form>
+</main>
+<footer id="footer"></footer>
+<script type="module" src="/js/pages/issue-form.js"></script>
+</body>
+</html>

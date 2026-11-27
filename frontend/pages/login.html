@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | FixItHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+<div class="auth-wrap">
+<div class="auth-card">
+<a class="brand" href="/index.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.1-.6-.6-2.1z"/></svg></span>FixItHub</a>
+<h1>Welcome back</h1>
+<p class="muted">Log in to report and track campus issues.</p>
+<form id="loginForm" novalidate>
+<div class="form-alert hidden" role="alert"></div>
+<div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email" required>
+<div class="field-error" data-error-for="email"></div></div>
+<div class="field"><label for="password">Password</label>
+<div class="pw-wrap"><input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+<button type="button" class="pw-toggle" data-toggle="password">Show</button></div>
+<div class="field-error" data-error-for="password"></div></div>
+<button class="btn btn-accent btn-block" type="submit">Log in</button>
+</form>
+<p class="small muted" style="margin-top:1rem">New here? <a href="/pages/register.html">Create an account</a></p>
+</div>
+</div>
+<script type="module" src="/js/pages/login.js"></script>
+</body>
+</html>

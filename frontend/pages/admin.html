@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage | FixItHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+<header id="navbar"></header>
+<main class="container">
+<div class="page-head"><div><h1>Admin panel</h1><p class="muted">Assign staff, set priority and status, and manage accounts.</p></div></div>
+<div class="tabs" role="tablist" id="adminTabs">
+<button class="tab" role="tab" data-tab="issues" aria-selected="true">Issues</button>
+<button class="tab" role="tab" data-tab="users" aria-selected="false">Users</button>
+</div>
+<section id="issuesPanel">
+<form class="filters wide" id="aFilters" role="search">
+<input class="input search" id="aSearch" type="search" placeholder="Search issues" aria-label="Search issues">
+<select class="input" id="aStatus" aria-label="Status"></select>
+<select class="input" id="aPriority" aria-label="Priority"></select>
+<select class="input" id="aBuilding" aria-label="Building"></select>
+<select class="input" id="aCategory" aria-label="Category"></select>
+<select class="input" id="aDepartment" aria-label="Department"></select>
+<select class="input" id="aAssigned" aria-label="Assignment"><option value="">Any assignment</option><option value="none">Unassigned only</option></select>
+<select class="input" id="aSort" aria-label="Sort"><option value="-createdAt">Newest first</option><option value="-upvoteCount">Most upvoted</option><option value="createdAt">Oldest first</option></select>
+</form>
+<div id="issueTable"></div><div class="pager" id="issuePager"></div>
+</section>
+<section id="usersPanel" class="hidden">
+<form class="filters wide" id="uFilters" role="search">
+<input class="input search" id="uSearch" type="search" placeholder="Search by name or email" aria-label="Search users">
+<select class="input" id="uRole" aria-label="Role"></select>
+</form>
+<div id="userTable"></div><div class="pager" id="userPager"></div>
+</section>
+</main>
+<footer id="footer"></footer>
+<script type="module" src="/js/pages/admin.js"></script>
+</body>
+</html>

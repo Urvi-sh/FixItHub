@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | FixItHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+<header id="navbar"></header>
+<main class="container">
+<div class="page-head">
+<div><h1 id="greeting">Dashboard</h1><p class="muted" id="subtitle"></p></div>
+<a class="btn btn-accent" href="/pages/issue-form.html">Report an issue</a>
+</div>
+<form id="adminFilters" class="filters wide hidden" aria-label="Analytics filters">
+<select class="input" id="fBuilding" aria-label="Building"></select>
+<select class="input" id="fCategory" aria-label="Category"></select>
+<select class="input" id="fDepartment" aria-label="Department"></select>
+<button type="button" class="btn btn-ghost" id="fReset">Clear filters</button>
+</form>
+<div id="statsArea">
+<div class="stats" id="stats"></div>
+<div class="charts" id="charts"></div>
+<h2>Recent issues</h2>
+<div class="grid-cards" id="recent"></div>
+</div>
+</main>
+<footer id="footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script type="module" src="/js/pages/dashboard.js"></script>
+</body>
+</html>
