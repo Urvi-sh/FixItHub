@@ -2,7 +2,7 @@
 
 A full-stack web app where students report campus problems (Wi-Fi, broken computers, electricity, furniture, hostel issues), upvote and discuss them, and track progress, while admins assign maintenance staff, set priority and status, and see analytics.
 
-**Live demo:** _add your Render / Netlify link here_ · **Demo video:** _add link_
+
 
 ## Features
 
@@ -54,7 +54,6 @@ A full-stack web app where students report campus problems (Wi-Fi, broken comput
 FixItHub/
 ├── README.md
 ├── .gitignore
-├── docs/screenshots/            # put your screenshots here
 ├── backend/
 │   ├── server.js                # entry point
 │   ├── seed.js                  # demo data
